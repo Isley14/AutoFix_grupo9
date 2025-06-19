@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoFix - Reparación a Domicilio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>AutoFix - Reparación de Vehículos a Domicilio</h1>
+
+    <section>
+      <h2>Servicios y Precios</h2>
+      <div class="services">
+        <div class="card">
+          <img src="aceite.png" alt="Cambio de aceite" />
+          <h3>Cambio de aceite</h3>
+          <p>Precio: $25.000 CLP</p>
+        </div>
+        <div class="card">
+          <img src="freno.png" alt="Revisión de frenos" />
+          <h3>Revisión de frenos</h3>
+          <p>Precio: $35.000 CLP</p>
+        </div>
+        <div class="card">
+          <img src="diagnostico.png" alt="Diagnóstico eléctrico" />
+          <h3>Diagnóstico eléctrico</h3>
+          <p>Precio: $30.000 CLP</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Solicitar Reparación</h2>
+      <form id="repairForm">
+        <label>Nombre del Cliente
+          <input type="text" name="cliente" required />
+        </label>
+
+        <label>Tipo de Reparación
+          <select name="servicio" required>
+            <option value="">Selecciona un servicio</option>
+            <option value="Cambio de aceite">Cambio de aceite</option>
+            <option value="Revisión de frenos">Revisión de frenos</option>
+            <option value="Diagnóstico eléctrico">Diagnóstico eléctrico</option>
+          </select>
+        </label>
+
+        <label>Descripción
+          <textarea name="descripcion" rows="3" required></textarea>
+        </label>
+
+        <label>Agendar Cita
+          <input type="datetime-local" name="cita" required />
+        </label>
+
+        <h3>Información de Pago (simulado)</h3>
+        <label>Número de tarjeta
+          <input type="text" name="tarjeta" placeholder="**** **** **** 1234" required />
+        </label>
+
+        <label>Nombre del titular
+          <input type="text" name="titular" required />
+        </label>
+
+        <label>CVV
+          <input type="text" name="cvv" maxlength="3" required />
+        </label>
+
+        <button type="submit">Confirmar Solicitud</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
